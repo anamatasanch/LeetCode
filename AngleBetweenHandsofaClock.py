@@ -1,5 +1,6 @@
 #1344. Angle Between Hands of a Clock
 #Author: Ana Luisa Mata
+
 #Given two numbers, hour and minutes. 
 #Return the smaller angle (in degrees) 
 #formed between the hour and the minute hand.
