@@ -11,7 +11,7 @@
 #Runtime: Runtime: 132 ms, faster than 92.11% of Python3 online submissions for Max Area of Island.
 #Memory Usage: Memory Usage: 13.7 MB, less than 100.00% of Python3 online submissions for Max Area of Island.
 #Time complexity: O(nm)
-#Space complexity: O(1)
+#Space complexity: O(nm)
 
 class Solution:
     def islandTraveler(self,node, grid):
