@@ -8,7 +8,7 @@
 #Find the maximum area of an island in the given 2D array. 
 #(If there is no island, the maximum area is 0.)
 
-#Runtime: 136 ms, faster than 86.59% of Python3 online submissions for Max Area of Island.
+#Runtime: Runtime: 132 ms, faster than 92.11% of Python3 online submissions for Max Area of Island.
 #Memory Usage: Memory Usage: 13.7 MB, less than 100.00% of Python3 online submissions for Max Area of Island.
 #Time complexity: O(nm)
 #Space complexity: O(1)
@@ -40,7 +40,7 @@ class Solution:
 
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if grid[i][j] == 1:
+                if grid[i][j] is 1:
                     curr = self.islandTraveler([i,j], grid)
                     if curr>maxIsland:
                       maxIsland = curr
