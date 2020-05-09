@@ -9,7 +9,7 @@
 #(If there is no island, the maximum area is 0.)
 
 #Runtime: 136 ms, faster than 86.59% of Python3 online submissions for Max Area of Island.
-#Memory Usage: 13.9 MB, less than 100.00% of Python3 online submissions for Max Area of Island.
+#Memory Usage: Memory Usage: 13.7 MB, less than 100.00% of Python3 online submissions for Max Area of Island.
 #Time complexity: O(nm)
 #Space complexity: O(1)
 
@@ -20,20 +20,16 @@ class Solution:
         grid[node[0]][node[1]]=0
         while len(stacky)>0:
             curr = stacky.pop()
-            if curr[0]-1>=0 and curr[0]-1<len(grid):
-              if grid[curr[0]-1][curr[1]]==1:
+            if curr[0]-1>=0 and curr[0]-1<len(grid) and grid[curr[0]-1][curr[1]]==1:
                 stacky.append([curr[0]-1,curr[1]])
                 grid[curr[0]-1][curr[1]]=0
-            if curr[1]-1>=0 and curr[1]-1<len(grid[0]):
-              if grid[curr[0]][curr[1]-1]==1:
+            if curr[1]-1>=0 and curr[1]-1<len(grid[0]) and grid[curr[0]][curr[1]-1]==1:
                 stacky.append([curr[0],curr[1]-1])
                 grid[curr[0]][curr[1]-1]=0
-            if curr[1]+1>=0 and curr[1]+1<len(grid[0]):
-              if grid[curr[0]][curr[1]+1]==1:
+            if curr[1]+1>=0 and curr[1]+1<len(grid[0]) and grid[curr[0]][curr[1]+1]==1:
                 stacky.append([curr[0],curr[1]+1])
                 grid[curr[0]][curr[1]+1]=0
-            if curr[0]+1>=0 and curr[0]+1<len(grid):
-              if grid[curr[0]+1][curr[1]]==1:
+            if curr[0]+1>=0 and curr[0]+1<len(grid) and grid[curr[0]+1][curr[1]]==1:
                 stacky.append([curr[0]+1,curr[1]])
                 grid[curr[0]+1][curr[1]]=0
             count+=1
